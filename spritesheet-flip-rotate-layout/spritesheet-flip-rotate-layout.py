@@ -8,7 +8,7 @@ def SPRITESHEET_FLIP_ROTATE_LAYOUT(image, drawable, spriteWidth, spriteHeight, p
 	pdb.gimp_message("padding = " + str(padding))
 	pdb.gimp_image_undo_group_start(image)
 	# Resize image canvas
-	newWidth = (image.width * 2) + 1
+	newWidth = (image.width * 2) + padding
 	newheight = image.height
 	pdb.gimp_image_resize(image, newWidth, newheight, 0, 0)
 	pdb.gimp_layer_resize_to_image_size(image.layers[0])
